@@ -28,17 +28,20 @@ class LoginScreen extends StatelessWidget {
           ),
           onPressed: () async {
             final userCredential = await AuthServices().signInWithGoogle();
+            //if sign is successful
             if (userCredential != null) {
-              final user = FirebaseAuth.instance.currentUser;
+              final user = AuthServices().currentUser;
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text('Welcome ${user?.displayName ?? 'User'}!'),
                 ),
               );
-              // Navigate to home screen
+              //navigate to home screen
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(builder: (context) => HomeScreen()),
               );
+
+              //if not
             } else {
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(content: Text('Google Sign-In failed')),

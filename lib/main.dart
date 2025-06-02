@@ -1,4 +1,5 @@
 import 'package:clutch_sports_app/firebase_options.dart';
+import 'package:clutch_sports_app/screens/home_screen.dart';
 import 'package:clutch_sports_app/screens/login_screen.dart';
 import 'package:clutch_sports_app/screens/onboarding.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -28,6 +29,11 @@ class MyApp extends StatelessWidget {
     FlutterNativeSplash.remove();
     return MaterialApp(
       title: 'Clutch',
+      initialRoute: '/login',
+      routes: {
+        '/login': (context) => const LoginScreen(), // ✅ Add this
+        '/home': (context) => const HomeScreen(), // example route
+      },
       theme: ThemeData(
         textTheme: TextTheme(
           headlineMedium: TextStyle(
