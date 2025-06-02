@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "455600456150",
+    "project_id": "clutch-sports-app",
+    "storage_bucket": "clutch-sports-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455600456150:android:4cda2968843d5dcc61e477",
+        "android_client_info": {
+          "package_name": "com.example.clutch_sports_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq4hR7wDOE_0rywsXNxn00v_jTkhG9xws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

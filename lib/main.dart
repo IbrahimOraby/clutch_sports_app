@@ -1,5 +1,7 @@
-import 'package:clutch_sports_app/screens/home_screen.dart';
+import 'package:clutch_sports_app/firebase_options.dart';
+import 'package:clutch_sports_app/screens/login_screen.dart';
 import 'package:clutch_sports_app/screens/onboarding.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -7,7 +9,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 Future main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  //
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
+  //
   final prefs = await SharedPreferences.getInstance();
   final onBoardingVisited = prefs.getBool('onBoardingVisited') ?? false;
   runApp(MyApp(onBoardingVisited: onBoardingVisited));
@@ -36,7 +42,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: onBoardingVisited ? HomeScreen() : OnboardingScreen(),
+      home: onBoardingVisited ? LoginScreen() : OnboardingScreen(),
     );
   }
 }
