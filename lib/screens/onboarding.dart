@@ -1,4 +1,4 @@
-import 'package:clutch_sports_app/screens/home_screen.dart';
+import 'package:clutch_sports_app/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -94,7 +94,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 prefs.setBool('onBoardingVisited', true);
 
                 Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => HomeScreen()),
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
                 );
               },
               child: const Text(
