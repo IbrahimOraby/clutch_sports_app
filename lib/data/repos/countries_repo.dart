@@ -1,0 +1,25 @@
+import 'dart:developer';
+import 'package:clutch_sports_app/data/models/countries_model.dart';
+import 'package:dio/dio.dart';
+
+class NewsRepo {
+  Dio dio = Dio();
+
+  Future<CountriesResponseModel?> getNews() async {
+    try {
+      var response = await dio.get(
+        'https://apiv2.allsportsapi.com/football/?met=Countries&APIkey=5ac38244313c159b722b85acc0be74f48334e62eb259e2155a655ae9491f4f3d',
+      );
+      if (response.statusCode! > 299) {
+        return null;
+      } else {
+        CountriesResponseModel countriesResponseModel =
+            CountriesResponseModel.fromJson(response.data);
+        return countriesResponseModel;
+      }
+    } catch (e) {
+      log(e.toString());
+      rethrow;
+    }
+  }
+}
