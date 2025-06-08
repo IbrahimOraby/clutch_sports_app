@@ -1,16 +1,16 @@
 import 'package:bloc/bloc.dart';
 import 'package:clutch_sports_app/data/models/countries_model.dart';
 import 'package:clutch_sports_app/data/repos/countries_repo.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter/cupertino.dart';
 
 part 'countries_state.dart';
 
 class CountriesCubit extends Cubit<CountriesState> {
   final CountriesRepo countriesRepo;
 
-  CountriesCubit(this.countriesRepo) : super(CountriesCubitInitial());
+  CountriesCubit(this.countriesRepo) : super(CountriesInitial());
 
-  Future<void> getCountries() async {
+  Future<void> fetchCountries() async {
     emit(CountriesLoading());
 
     try {
