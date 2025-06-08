@@ -2,7 +2,7 @@ import 'dart:developer';
 import 'package:clutch_sports_app/data/models/teams_model.dart';
 import 'package:dio/dio.dart';
 
-class CountriesRepo {
+class TeamsRepo {
   Dio dio = Dio();
 
   Future<TeamsResponseModel?> getTeams(int leagueId) async {
