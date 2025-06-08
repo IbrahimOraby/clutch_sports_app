@@ -10,7 +10,7 @@ class TopscorersCubit extends Cubit<TopscorersState> {
 
   TopscorersCubit(this.topScorersRepo) : super(TopscorersInitial());
 
-  Future<void> fetchTopScorers(int leagueId) async {
+  Future<void> fetchTopscorers(int leagueId) async {
     emit(TopscorersLoading());
 
     try {

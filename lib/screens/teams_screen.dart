@@ -1,5 +1,4 @@
 import 'package:clutch_sports_app/cubits/teams/teams_cubit.dart';
-import 'package:clutch_sports_app/screens/leagues_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -22,7 +21,7 @@ class _TeamsScreenState extends State<TeamsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Teams')),
+      // appBar: AppBar(title: const Text('Teams')),
       body: BlocBuilder<TeamsCubit, TeamsState>(
         builder: (context, state) {
           if (state is TeamsLoading) {
@@ -38,14 +37,7 @@ class _TeamsScreenState extends State<TeamsScreen> {
                       : Icon(Icons.flag),
                   title: Text(team.teamName ?? 'No Name'),
                   onTap: () {
-                    print('temsss');
-                    // navigate to leagues screen
-                    // Navigator.of(context).push(
-                    //   MaterialPageRoute(
-                    //     builder: (context) =>
-                    //         LeaguesScreen(teamId: team.teamKey!),
-                    //   ),
-                    // );
+                    print('teams');
                   },
                 );
               },

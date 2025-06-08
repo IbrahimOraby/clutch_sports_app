@@ -60,6 +60,7 @@ class MyApp extends StatelessWidget {
           '/home': (context) => const HomeScreen(),
         },
         theme: ThemeData(
+          primaryColor: Color(0xFF3674B5),
           textTheme: TextTheme(
             headlineMedium: TextStyle(
               fontSize: 24,
