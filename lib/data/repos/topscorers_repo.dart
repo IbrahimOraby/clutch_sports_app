@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 class TopscorersRepo {
   final Dio dio = Dio();
 
-  Future<TopScorersResponseModel?> getTopScorers(int leagueId) async {
+  Future<TopscorersResponseModel?> getTopScorers(int leagueId) async {
     try {
       final response = await dio.get(
         'https://apiv2.allsportsapi.com/football/',
@@ -19,8 +19,8 @@ class TopscorersRepo {
       if (response.statusCode! > 299) {
         return null;
       } else {
-        TopScorersResponseModel topScorersResponseModel =
-            TopScorersResponseModel.fromJson(response.data);
+        TopscorersResponseModel topScorersResponseModel =
+            TopscorersResponseModel.fromJson(response.data);
         return topScorersResponseModel;
       }
     } catch (e) {

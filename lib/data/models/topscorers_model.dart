@@ -1,20 +1,20 @@
-class TopScorersResponseModel {
+class TopscorersResponseModel {
   final int success;
-  final List<TopScorerModel> result;
+  final List<TopscorerModel> result;
 
-  TopScorersResponseModel({required this.success, required this.result});
+  TopscorersResponseModel({required this.success, required this.result});
 
-  factory TopScorersResponseModel.fromJson(Map<String, dynamic> json) {
-    return TopScorersResponseModel(
+  factory TopscorersResponseModel.fromJson(Map<String, dynamic> json) {
+    return TopscorersResponseModel(
       success: json['success'] ?? 0,
       result: (json['result'] as List)
-          .map((item) => TopScorerModel.fromJson(item))
+          .map((item) => TopscorerModel.fromJson(item))
           .toList(),
     );
   }
 }
 
-class TopScorerModel {
+class TopscorerModel {
   final int? playerPlace;
   final String? playerName;
   final int? playerKey;
@@ -24,7 +24,7 @@ class TopScorerModel {
   final int? assists;
   final int? penaltyGoals;
 
-  TopScorerModel({
+  TopscorerModel({
     this.playerPlace,
     this.playerName,
     this.playerKey,
@@ -35,8 +35,8 @@ class TopScorerModel {
     this.penaltyGoals,
   });
 
-  factory TopScorerModel.fromJson(Map<String, dynamic> json) {
-    return TopScorerModel(
+  factory TopscorerModel.fromJson(Map<String, dynamic> json) {
+    return TopscorerModel(
       playerPlace: json['player_place'],
       playerName: json['player_name'],
       playerKey: json['player_key'],

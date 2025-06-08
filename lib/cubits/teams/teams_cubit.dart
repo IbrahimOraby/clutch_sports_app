@@ -7,6 +7,7 @@ part 'teams_state.dart';
 
 class TeamsCubit extends Cubit<TeamsState> {
   final TeamsRepo teamsRepo;
+
   TeamsCubit(this.teamsRepo) : super(TeamsInitial());
 
   Future<void> fetchTeams(int leagueId) async {

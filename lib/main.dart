@@ -1,7 +1,9 @@
 import 'package:clutch_sports_app/cubits/leagues/leagues_cubit.dart';
 import 'package:clutch_sports_app/cubits/teams/teams_cubit.dart';
+import 'package:clutch_sports_app/cubits/topscorers/topscorers_cubit.dart';
 import 'package:clutch_sports_app/data/repos/leagues_repo.dart';
 import 'package:clutch_sports_app/data/repos/teams_repo.dart';
+import 'package:clutch_sports_app/data/repos/topscorers_repo.dart';
 import 'package:clutch_sports_app/firebase_options.dart';
 import 'package:clutch_sports_app/screens/home_screen.dart';
 import 'package:clutch_sports_app/screens/login_screen.dart';
@@ -49,6 +51,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => CountriesCubit(CountriesRepo())),
         BlocProvider(create: (context) => LeaguesCubit(LeaguesRepo())),
         BlocProvider(create: (context) => TeamsCubit(TeamsRepo())),
+        BlocProvider(create: (context) => TopscorersCubit(TopscorersRepo())),
       ],
       child: MaterialApp(
         title: 'Clutch',
