@@ -14,7 +14,7 @@ class _CountriesScreenState extends State<CountriesScreen> {
   @override
   void initState() {
     super.initState();
-    context.read<CountriesCubit>().getCountries();
+    context.read<CountriesCubit>().fetchCountries();
   }
 
   @override
@@ -38,7 +38,10 @@ class _CountriesScreenState extends State<CountriesScreen> {
                   onTap: () {
                     // navigate to leagues screen
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => LeaguesScreen()),
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            LeaguesScreen(countryId: country.country_key!),
+                      ),
                     );
                   },
                 );

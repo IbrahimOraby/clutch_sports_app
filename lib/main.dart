@@ -1,9 +1,10 @@
+import 'package:clutch_sports_app/cubits/leagues/leagues_cubit.dart';
+import 'package:clutch_sports_app/data/repos/leagues_repo.dart';
 import 'package:clutch_sports_app/firebase_options.dart';
 import 'package:clutch_sports_app/screens/home_screen.dart';
 import 'package:clutch_sports_app/screens/login_screen.dart';
 import 'package:clutch_sports_app/screens/onboarding.dart';
 import 'package:clutch_sports_app/services/auth/auth_service.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => CountriesCubit(CountriesRepo())),
+        BlocProvider(create: (context) => LeaguesCubit(LeaguesRepo())),
       ],
       child: MaterialApp(
         title: 'Clutch',
