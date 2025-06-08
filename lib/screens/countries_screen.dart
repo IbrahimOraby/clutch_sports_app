@@ -1,4 +1,5 @@
 import 'package:clutch_sports_app/cubits/countries/countries_cubit.dart';
+import 'package:clutch_sports_app/screens/leagues_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -35,7 +36,10 @@ class _CountriesScreenState extends State<CountriesScreen> {
                       : Icon(Icons.flag),
                   title: Text(country.country_name ?? 'No Name'),
                   onTap: () {
-                    print('Alooo');
+                    // navigate to leagues screen
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => LeaguesScreen()),
+                    );
                   },
                 );
               },
