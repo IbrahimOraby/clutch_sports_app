@@ -15,30 +15,30 @@ class LeaguesResponseModel {
 }
 
 class LeagueModel {
-  final int? league_key;
-  final String? league_name;
-  final int? country_key;
-  final String? country_name;
-  final String? league_logo;
-  final String? country_logo;
+  final int? leagueKey;
+  final String? leagueName;
+  final int? countryKey;
+  final String? countryName;
+  final String? leagueLogo;
+  final String? countryLogo;
 
   LeagueModel({
-    this.league_key,
-    this.league_name,
-    this.country_key,
-    this.country_name,
-    this.league_logo,
-    this.country_logo,
+    this.leagueKey,
+    this.leagueName,
+    this.countryKey,
+    this.countryName,
+    this.leagueLogo,
+    this.countryLogo,
   });
 
   factory LeagueModel.fromJson(Map<String, dynamic> json) {
     return LeagueModel(
-      league_key: json['league_key'],
-      league_name: json['league_name'],
-      country_key: json['country_key'],
-      country_name: json['country_name'],
-      league_logo: json['league_logo'],
-      country_logo: json['country_logo'],
+      leagueKey: json['league_key'],
+      leagueName: json['league_name'],
+      countryKey: json['country_key'],
+      countryName: json['country_name'],
+      leagueLogo: json['league_logo'],
+      countryLogo: json['country_logo'],
     );
   }
 }

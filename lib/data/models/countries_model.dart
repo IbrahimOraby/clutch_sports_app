@@ -15,24 +15,24 @@ class CountriesResponseModel {
 }
 
 class CountriesModel {
-  final int? country_key;
-  final String? country_name;
-  final String? country_iso2;
-  final String? country_logo;
+  final int? countryKey;
+  final String? countryName;
+  final String? countryIso2;
+  final String? countryLogo;
 
   CountriesModel({
-    this.country_key,
-    this.country_name,
-    this.country_iso2,
-    this.country_logo,
+    this.countryKey,
+    this.countryName,
+    this.countryIso2,
+    this.countryLogo,
   });
 
   factory CountriesModel.fromJson(Map<String, dynamic> json) {
     return CountriesModel(
-      country_key: json['country_key'],
-      country_name: json['country_name'],
-      country_iso2: json['country_iso2'],
-      country_logo: json['country_logo'],
+      countryKey: json['country_key'],
+      countryName: json['country_name'],
+      countryIso2: json['country_iso2'],
+      countryLogo: json['country_logo'],
     );
   }
 }

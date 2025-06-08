@@ -31,16 +31,16 @@ class _CountriesScreenState extends State<CountriesScreen> {
               itemBuilder: (context, index) {
                 final country = state.countries[index];
                 return ListTile(
-                  leading: country.country_logo != null
-                      ? Image.network(country.country_logo!, width: 40)
+                  leading: country.countryLogo != null
+                      ? Image.network(country.countryLogo!, width: 40)
                       : Icon(Icons.flag),
-                  title: Text(country.country_name ?? 'No Name'),
+                  title: Text(country.countryName ?? 'No Name'),
                   onTap: () {
                     // navigate to leagues screen
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) =>
-                            LeaguesScreen(countryId: country.country_key!),
+                            LeaguesScreen(countryId: country.countryKey!),
                       ),
                     );
                   },

@@ -31,10 +31,10 @@ class _LeaguesScreenState extends State<LeaguesScreen> {
               itemBuilder: (context, index) {
                 final league = state.leagues[index];
                 return ListTile(
-                  leading: league.league_logo != null
-                      ? Image.network(league.league_logo!, width: 40)
+                  leading: league.leagueLogo != null
+                      ? Image.network(league.leagueLogo!, width: 40)
                       : Icon(Icons.flag),
-                  title: Text(league.league_name ?? 'No Name'),
+                  title: Text(league.leagueName ?? 'No Name'),
                   onTap: () {
                     print('leagueesss');
                     // navigate to leagues screen
