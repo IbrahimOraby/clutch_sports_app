@@ -1,4 +1,5 @@
 import 'package:clutch_sports_app/cubits/leagues/leagues_cubit.dart';
+import 'package:clutch_sports_app/screens/teams_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -36,14 +37,13 @@ class _LeaguesScreenState extends State<LeaguesScreen> {
                       : Icon(Icons.flag),
                   title: Text(league.leagueName ?? 'No Name'),
                   onTap: () {
-                    print('leagueesss');
-                    // navigate to leagues screen
-                    // Navigator.of(context).push(
-                    //   MaterialPageRoute(
-                    //     builder: (context) =>
-                    //         LeaguesScreen(countryId: country.country_key!),
-                    //   ),
-                    // );
+                    // navigate to teams screen
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            TeamsScreen(leagueId: league.leagueKey!),
+                      ),
+                    );
                   },
                 );
               },
