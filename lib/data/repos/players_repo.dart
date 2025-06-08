@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 class PlayersRepo {
   final Dio dio = Dio();
 
-  Future<PlayersResponseModel?> getSquadPlayers(int teamId) async {
+  Future<PlayersResponseModel?> getPlayers(int teamId) async {
     try {
       final response = await dio.get(
         'https://apiv2.allsportsapi.com/football/',
