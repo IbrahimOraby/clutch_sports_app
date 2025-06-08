@@ -1,7 +1,6 @@
 import 'package:clutch_sports_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import '../services/auth/auth_service.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

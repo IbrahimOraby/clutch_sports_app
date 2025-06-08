@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
     if (sportName == 'Football') {
       Navigator.of(
         context,
-      ).push(MaterialPageRoute(builder: (context) => const CountriesScreen()));
+      ).push(MaterialPageRoute(builder: (context) => CountriesScreen()));
     } else {
       showDialog(
         context: context,

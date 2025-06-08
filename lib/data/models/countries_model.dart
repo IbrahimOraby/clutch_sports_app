@@ -1,6 +1,6 @@
 class CountriesResponseModel {
   final int success;
-  final List result;
+  final List<CountriesModel> result;
 
   CountriesResponseModel({required this.success, required this.result});
 

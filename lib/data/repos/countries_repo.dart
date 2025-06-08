@@ -2,13 +2,13 @@ import 'dart:developer';
 import 'package:clutch_sports_app/data/models/countries_model.dart';
 import 'package:dio/dio.dart';
 
-class NewsRepo {
+class CountriesRepo {
   Dio dio = Dio();
 
-  Future<CountriesResponseModel?> getNews() async {
+  Future<CountriesResponseModel?> getCountries() async {
     try {
       var response = await dio.get(
-        'https://apiv2.allsportsapi.com/football/?met=Countries&APIkey=5ac38244313c159b722b85acc0be74f48334e62eb259e2155a655ae9491f4f3d',
+        'https://apiv2.allsportsapi.com/football/?met=\Countries&APIkey=5ac38244313c159b722b85acc0be74f48334e62eb259e2155a655ae9491f4f3d',
       );
       if (response.statusCode! > 299) {
         return null;
